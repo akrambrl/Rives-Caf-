@@ -1,0 +1,162 @@
+/* ============ RIVES Café — styles globaux & design tokens ============ */
+
+:root {
+  /* Couleurs (source de vérité : README) */
+  --espresso: #2a1712;
+  --walnut: #7a5234;
+  --plaster: #efe5d3;
+  --warm-white: #f8f1e3;
+  --sand: #e3d4ba;
+  --bordeaux: #7b2820;
+  --bordeaux-deep: #531a13;
+  --rose: #c5837a;
+
+  /* Layout */
+  --maxw: 1240px;
+
+  /* Polices (injectées par next/font dans layout.tsx) */
+  --font-chewy: "Chewy", cursive;
+  --font-hanken: "Hanken Grotesk", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-hanken);
+  color: var(--espresso);
+  background: var(--warm-white);
+  line-height: 1.55;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- Helpers partagés ---------- */
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.chewy {
+  font-family: var(--font-chewy);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 0.95;
+}
+
+.eyebrow {
+  font-size: 14px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--bordeaux);
+}
+.eyebrow.light {
+  color: var(--rose);
+}
+
+/* Motif de marque : rangée de petits carrés (clin d'œil au zellige) */
+.squares {
+  display: inline-flex;
+  gap: 9px;
+}
+.squares i {
+  width: 18px;
+  height: 18px;
+  background: currentColor;
+  display: block;
+}
+
+/* ---------- Boutons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  padding: 16px 28px;
+  border-radius: 999px;
+  transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.btn-primary {
+  background: var(--bordeaux);
+  color: var(--warm-white);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: var(--bordeaux-deep);
+}
+.btn-ghost {
+  background: transparent;
+  border-color: currentColor;
+  color: var(--bordeaux);
+}
+.btn-ghost:hover {
+  transform: translateY(-2px);
+  background: var(--bordeaux);
+  color: var(--warm-white);
+  border-color: var(--bordeaux);
+}
+.btn-ghost.on-dark {
+  color: var(--warm-white);
+}
+.btn-ghost.on-dark:hover {
+  background: var(--warm-white);
+  color: var(--bordeaux);
+  border-color: var(--warm-white);
+}
+/* Variante crème (sur fond bordeaux / zellige) */
+.btn-cream {
+  background: var(--warm-white);
+  color: var(--bordeaux);
+}
+.btn-cream:hover {
+  transform: translateY(-2px);
+  background: var(--sand);
+}
+
+/* ---------- Accessibilité ---------- */
+:focus-visible {
+  outline: 3px solid var(--rose);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+  .btn:hover,
+  .btn-primary:hover,
+  .btn-ghost:hover,
+  .btn-cream:hover {
+    transform: none;
+  }
+}

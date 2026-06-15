@@ -1,0 +1,77 @@
+.section {
+  background: var(--warm-white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.copy h2 {
+  font-size: 54px;
+  margin: 14px 0 22px;
+  color: var(--bordeaux);
+}
+.copy p {
+  font-size: 18px;
+  color: var(--walnut);
+  margin-bottom: 18px;
+  max-width: 46ch;
+}
+.squares {
+  color: var(--rose);
+  margin-top: 14px;
+}
+
+.photo {
+  position: relative;
+}
+.photoFrame {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  border-radius: 280px 280px 26px 26px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(42, 12, 8, 0.22);
+}
+.photoImg {
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  right: -18px;
+  bottom: 40px;
+  background: var(--bordeaux);
+  color: var(--warm-white);
+  width: 150px;
+  height: 150px;
+  border-radius: 999px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-chewy);
+  font-size: 22px;
+  line-height: 1.05;
+  box-shadow: 0 14px 30px rgba(42, 12, 8, 0.3);
+  transform: rotate(-8deg);
+}
+.badge small {
+  font-family: var(--font-hanken);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

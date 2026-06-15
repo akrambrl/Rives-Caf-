@@ -1,0 +1,86 @@
+.section {
+  position: relative;
+  background: #5e2017 url("/assets/zellige-tile.png");
+  background-size: 480px 480px;
+  color: var(--warm-white);
+}
+
+.head {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.head .eyebrow {
+  display: block;
+}
+.head h2 {
+  font-size: 56px;
+  margin: 14px 0 0;
+}
+
+.card {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--warm-white);
+  color: var(--espresso);
+  border-radius: 24px;
+  padding: 64px 70px;
+  box-shadow: 0 30px 70px rgba(20, 6, 4, 0.4);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 54px;
+}
+
+.col h3 {
+  font-family: var(--font-chewy);
+  font-size: 38px;
+  color: var(--bordeaux);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.colSquares {
+  color: var(--rose);
+  transform: scale(0.7);
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1.5px solid rgba(123, 40, 32, 0.14);
+}
+.row[data-last] {
+  border-bottom: none;
+}
+.name {
+  font-size: 19px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.dots {
+  flex: 1;
+  border-bottom: 2px dotted rgba(123, 40, 32, 0.28);
+  transform: translateY(-5px);
+}
+.price {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--bordeaux);
+  font-variant-numeric: tabular-nums;
+}
+
+.foot {
+  text-align: center;
+  margin-top: 48px;
+}
+
+@media (max-width: 900px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+  .head h2 {
+    font-size: 40px;
+  }
+}

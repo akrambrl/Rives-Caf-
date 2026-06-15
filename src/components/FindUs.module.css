@@ -1,0 +1,118 @@
+.section {
+  background: var(--warm-white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(20, 6, 4, 0.4);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.info {
+  background: var(--warm-white);
+  color: var(--espresso);
+  padding: 60px 60px;
+}
+.info h2 {
+  font-family: var(--font-chewy);
+  font-size: 50px;
+  color: var(--bordeaux);
+  margin: 12px 0 28px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: flex-start;
+}
+.ic {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: var(--plaster);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bordeaux);
+  flex: none;
+}
+.ic svg {
+  width: 22px;
+  height: 22px;
+}
+.row b {
+  font-size: 17px;
+  display: block;
+  margin-bottom: 2px;
+}
+.row > div > span {
+  color: var(--walnut);
+  font-size: 15.5px;
+  line-height: 1.45;
+}
+.btn {
+  margin-top: 10px;
+}
+
+.map {
+  position: relative;
+  min-height: 480px;
+  background: var(--sand);
+}
+/* Fallback CSS visible si l'iframe ne charge pas */
+.map::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+      90deg,
+      transparent 0 58px,
+      rgba(123, 40, 32, 0.07) 58px 60px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 58px,
+      rgba(123, 40, 32, 0.07) 58px 60px
+    ),
+    linear-gradient(135deg, #e9dcc4, #ddc9a8);
+}
+.map::after {
+  content: "\1F4CD RIVES \00b7 Paris 19e";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bordeaux);
+  color: var(--warm-white);
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  box-shadow: 0 10px 24px rgba(42, 12, 8, 0.3);
+}
+.map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: saturate(0.85) sepia(0.12);
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .map {
+    min-height: 320px;
+  }
+}
