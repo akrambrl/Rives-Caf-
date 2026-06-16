@@ -1,17 +1,19 @@
+import Image from "next/image";
 import { site } from "@/content";
-import zellige from "../../public/assets/zellige-tile.png";
+import hero from "../../public/assets/hero-rives.png";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
   return (
-    <header
-      className={styles.hero}
-      id="hero"
-      style={{ backgroundImage: `url(${zellige.src})` }}
-    >
+    <header className={styles.hero} id="hero">
+      <Image
+        src={hero}
+        alt="RiVES Café"
+        priority
+        sizes="100vw"
+        className={styles.banner}
+      />
       <div className={styles.inner}>
-        <div className={`${styles.logo} chewy`}>RiVES</div>
-        <div className={styles.sub}>Café</div>
         <h1 className="chewy">Good coffee, good people, good day.</h1>
         <p className={styles.lead}>{site.description}</p>
         <div className={styles.cta}>
@@ -23,7 +25,6 @@ export default function Hero() {
           </a>
         </div>
       </div>
-      <div className={styles.scrolldown}>Défiler</div>
     </header>
   );
 }
