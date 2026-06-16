@@ -21,26 +21,27 @@ Landing page **one-page** du coffee shop RIVES Café (Paris 19e), construite en
 ```bash
 npm install
 npm run dev      # http://localhost:3000
-npm run build    # build de production (export statique → dossier out/)
-npm run preview  # sert le dossier out/ en local
+npm run build    # build de production
+npm start        # sert le build de production en local
 ```
 
-## Déploiement (GitHub Pages)
+## Déploiement (Vercel)
 
-Le site est configuré pour un **export 100% statique** publié sur **GitHub Pages**
-via GitHub Actions (`.github/workflows/deploy.yml`). Le workflow build le site,
-fixe automatiquement le `basePath` au nom du repo, et déploie.
+Le site se déploie sur **Vercel** en zéro-config (Vercel détecte Next.js,
+conserve l'optimisation `next/image` et le rendu statique des pages).
 
-**À faire une seule fois** dans les réglages du repo GitHub :
+**Étapes (une seule fois) :**
 
-1. **Settings → Pages → Build and deployment → Source : « GitHub Actions ».**
-2. Le push sur la branche déclenche le workflow ; l'URL publique apparaît dans
-   l'onglet **Actions** (job *deploy*) et dans **Settings → Pages**.
-3. URL finale : `https://<utilisateur>.github.io/<nom-du-repo>/`.
+1. Aller sur [vercel.com/new](https://vercel.com/new) et se connecter avec GitHub.
+2. **Importer** le repo `akrambrl/Rives-Caf-`.
+3. Choisir la branche à déployer (Production Branch), laisser les réglages par
+   défaut (Framework : Next.js) → **Deploy**.
+4. Vercel fournit une URL `https://<projet>.vercel.app` ; chaque push redéploie
+   automatiquement.
 
-> Pour héberger ailleurs sous un domaine racine (ex. Vercel, ou
-> `monsite.fr`), laisser `NEXT_PUBLIC_BASE_PATH` vide : le site fonctionne alors
-> à la racine sans préfixe.
+> Hébergement sous un sous-chemin (ex. GitHub Pages `/<repo>/`) : définir
+> `NEXT_PUBLIC_BASE_PATH=/<repo>` au build et activer `output: 'export'` dans
+> `next.config.ts`. Le helper `src/lib/asset.ts` gère déjà le préfixe des images.
 
 
 ## Structure
