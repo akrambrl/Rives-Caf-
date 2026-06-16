@@ -1,5 +1,5 @@
 import { menu } from "@/content";
-import zellige from "../../public/assets/zellige-tile.png";
+import zellige from "../../public/assets/zellige.png";
 import styles from "./Menu.module.css";
 
 export default function Menu() {

@@ -1,8 +1,9 @@
 .section {
   position: relative;
   background-color: #5e2017;
-  background-size: 480px 480px;
-  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--warm-white);
 }
 
