@@ -1,9 +1,14 @@
 import { site } from "@/content";
+import zellige from "../../public/assets/zellige-tile.png";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
   return (
-    <header className={styles.hero} id="hero">
+    <header
+      className={styles.hero}
+      id="hero"
+      style={{ backgroundImage: `url(${zellige.src})` }}
+    >
       <div className={styles.inner}>
         <div className={`${styles.logo} chewy`}>RiVES</div>
         <div className={styles.sub}>Café</div>

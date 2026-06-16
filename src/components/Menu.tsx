@@ -1,9 +1,14 @@
 import { menu } from "@/content";
+import zellige from "../../public/assets/zellige-tile.png";
 import styles from "./Menu.module.css";
 
 export default function Menu() {
   return (
-    <section className={`section ${styles.section}`} id="menu">
+    <section
+      className={`section ${styles.section}`}
+      id="menu"
+      style={{ backgroundImage: `url(${zellige.src})` }}
+    >
       <div className="wrap">
         <div className={styles.head}>
           <span className="eyebrow light">La carte</span>

@@ -5,8 +5,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: #5e2017 url("/assets/zellige-tile.png");
+  background-color: #5e2017;
   background-size: 480px 480px;
+  background-repeat: repeat;
   overflow: hidden;
   padding: 160px 0 90px;
 }

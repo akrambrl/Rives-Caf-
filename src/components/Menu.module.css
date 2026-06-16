@@ -1,7 +1,8 @@
 .section {
   position: relative;
-  background: #5e2017 url("/assets/zellige-tile.png");
+  background-color: #5e2017;
   background-size: 480px 480px;
+  background-repeat: repeat;
   color: var(--warm-white);
 }
 

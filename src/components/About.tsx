@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import styles from "./About.module.css";
 
 export default function About() {
@@ -34,7 +35,7 @@ export default function About() {
         <div className={styles.photo}>
           <div className={styles.photoFrame}>
             <Image
-              src="/assets/mood/r08.png"
+              src={asset("/assets/mood/r08.png")}
               alt="Terrasse de RIVES Café"
               fill
               sizes="(max-width: 900px) 100vw, 600px"

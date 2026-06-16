@@ -21,8 +21,27 @@ Landing page **one-page** du coffee shop RIVES Café (Paris 19e), construite en
 ```bash
 npm install
 npm run dev      # http://localhost:3000
-npm run build    # build de production
+npm run build    # build de production (export statique → dossier out/)
+npm run preview  # sert le dossier out/ en local
 ```
+
+## Déploiement (GitHub Pages)
+
+Le site est configuré pour un **export 100% statique** publié sur **GitHub Pages**
+via GitHub Actions (`.github/workflows/deploy.yml`). Le workflow build le site,
+fixe automatiquement le `basePath` au nom du repo, et déploie.
+
+**À faire une seule fois** dans les réglages du repo GitHub :
+
+1. **Settings → Pages → Build and deployment → Source : « GitHub Actions ».**
+2. Le push sur la branche déclenche le workflow ; l'URL publique apparaît dans
+   l'onglet **Actions** (job *deploy*) et dans **Settings → Pages**.
+3. URL finale : `https://<utilisateur>.github.io/<nom-du-repo>/`.
+
+> Pour héberger ailleurs sous un domaine racine (ex. Vercel, ou
+> `monsite.fr`), laisser `NEXT_PUBLIC_BASE_PATH` vide : le site fonctionne alors
+> à la racine sans préfixe.
+
 
 ## Structure
 

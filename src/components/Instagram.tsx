@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { gallery, social } from "@/content";
+import { asset } from "@/lib/asset";
 import { InstagramIcon, TikTokIcon } from "./icons";
 import styles from "./Instagram.module.css";
 
@@ -22,7 +23,7 @@ export default function Instagram() {
               className={styles.tile}
             >
               <Image
-                src={img.src}
+                src={asset(img.src)}
                 alt={img.alt}
                 fill
                 sizes="(max-width: 900px) 50vw, 25vw"
