@@ -83,7 +83,7 @@
     linear-gradient(135deg, #e9dcc4, #ddc9a8);
 }
 .map::after {
-  content: "\1F4CD RIVES \00b7 Paris 19e";
+  content: "\1F4CD RIVES \00b7 Pantin";
   position: absolute;
   left: 50%;
   top: 50%;

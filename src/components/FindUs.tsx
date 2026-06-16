@@ -62,7 +62,7 @@ export default function FindUs() {
 
           <div className={styles.map}>
             <iframe
-              title="Carte — RIVES Café, Paris 19e"
+              title="Carte — RIVES Café, Pantin"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               src={findUs.mapsEmbed}

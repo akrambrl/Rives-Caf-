@@ -11,7 +11,7 @@ export const site = {
     "Coffee shop de quartier à la parisienne — zellige bordeaux, pâtisseries maison et le bon café qui ralentit le temps.",
   url: "https://rives-cafe.fr",
   tagline:
-    "Coffee shop de quartier — bon café, pâtisseries maison & bonnes rencontres. Paris 19e.",
+    "Coffee shop de quartier — bon café, pâtisseries maison & bonnes rencontres. Pantin (93).",
 } as const;
 
 /** Liens de navigation (ancres des sections). */
@@ -32,17 +32,18 @@ export const social = {
 
 /** Infos pratiques (section « Nous trouver »). */
 export const findUs = {
-  address: "80, quai de l'Ourcq · 75019 Paris",
+  address: "80 avenue du Général Leclerc · 93500 Pantin",
   hours: ["Lun – Ven · 8h – 19h", "Sam – Dim · 9h – 19h"],
   email: "bonjour@rives-cafe.fr",
   phone: "01 23 45 67 89",
-  mapsLink: "https://maps.google.com/?q=Quai+de+l'Ourcq+Paris",
+  mapsLink:
+    "https://maps.google.com/?q=80+Avenue+du+G%C3%A9n%C3%A9ral+Leclerc+93500+Pantin",
   mapsEmbed:
-    "https://www.google.com/maps?q=Quai%20de%20l'Ourcq%20Paris&output=embed",
+    "https://www.google.com/maps?q=80%20Avenue%20du%20G%C3%A9n%C3%A9ral%20Leclerc%2C%2093500%20Pantin&output=embed",
 } as const;
 
 /** Adresse affichée dans la barre légale du footer. */
-export const legalAddress = "80 quai de l'Ourcq, 75019 Paris";
+export const legalAddress = "80 avenue du Général Leclerc, 93500 Pantin";
 
 export type MenuItem = { name: string; price: string };
 export type MenuColumn = { title: string; items: MenuItem[] };

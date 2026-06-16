@@ -43,9 +43,9 @@ const jsonLd = {
   telephone: findUs.phone,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "80 quai de l'Ourcq",
-    postalCode: "75019",
-    addressLocality: "Paris",
+    streetAddress: "80 avenue du Général Leclerc",
+    postalCode: "93500",
+    addressLocality: "Pantin",
     addressCountry: "FR",
   },
   openingHoursSpecification: [
