@@ -35,8 +35,8 @@ export default function About() {
         <div className={styles.photo}>
           <div className={styles.photoFrame}>
             <Image
-              src={asset("/assets/mood/r08.png")}
-              alt="Terrasse de RIVES Café"
+              src={asset("/assets/mood/devanture-portrait.png")}
+              alt="Devanture de RIVES Café"
               fill
               sizes="(max-width: 900px) 100vw, 600px"
               className={styles.photoImg}

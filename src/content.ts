@@ -78,14 +78,14 @@ export const menu: MenuColumn[] = [
 
 export type GalleryImage = { src: string; alt: string };
 
-/** Galerie Instagram (placeholders — voir public/assets/mood). */
+/** Galerie Instagram (photos RIVES Café). */
 export const gallery: GalleryImage[] = [
-  { src: "/assets/mood/r08.png", alt: "Terrasse ensoleillée de RIVES Café" },
-  { src: "/assets/mood/r10.png", alt: "Latte art servi au comptoir" },
-  { src: "/assets/mood/r03.png", alt: "Pâtisseries maison du jour" },
-  { src: "/assets/mood/r06.png", alt: "Devanture de RIVES Café" },
-  { src: "/assets/mood/r02.png", alt: "Packaging RIVES Café" },
-  { src: "/assets/mood/r11.png", alt: "Brunch du week-end" },
-  { src: "/assets/mood/r04.png", alt: "Intérieur en zellige bordeaux" },
-  { src: "/assets/mood/r05.png", alt: "Café fraîchement moulu" },
+  { src: "/assets/mood/terrasse.png", alt: "Devanture et terrasse de RIVES Café" },
+  { src: "/assets/mood/patisseries.png", alt: "Pâtisseries et viennoiseries maison" },
+  { src: "/assets/mood/comptoir.png", alt: "Comptoir et machine à espresso" },
+  { src: "/assets/mood/ambiance.png", alt: "Moment café en terrasse" },
+  { src: "/assets/mood/packaging.png", alt: "Packaging RIVES Café" },
+  { src: "/assets/mood/bord-eau.png", alt: "Un café au bord de l'eau" },
+  { src: "/assets/mood/interieur.png", alt: "Intérieur en zellige bordeaux" },
+  { src: "/assets/mood/cafe.png", alt: "Pause café chez RIVES" },
 ];
