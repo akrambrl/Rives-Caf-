@@ -15,12 +15,14 @@ export default function About() {
           </h2>
           <p>
             « Rives » évoque les berges, le bord de l&apos;eau, l&apos;endroit où
-            l&apos;on s&apos;arrête. RIVES Café, c&apos;est cette parenthèse
-            parisienne : un comptoir en zellige bordeaux, la lumière dorée du
-            matin et l&apos;odeur du café fraîchement moulu.
+            l&apos;on s&apos;arrête. RIVES Café, c&apos;est cette parenthèse posée
+            à <strong>Pantin</strong>, en Seine-Saint-Denis (93), à deux pas de
+            Paris et de Montreuil : un comptoir en zellige bordeaux, la lumière
+            dorée du matin et l&apos;odeur du café fraîchement moulu.
           </p>
           <p>
-            On torréfie avec soin, on pâtisse maison chaque matin, et on prend le
+            Café de spécialité, <strong>matcha</strong>, pâtisseries maison chaque
+            matin et brunch le week-end : on torréfie avec soin et on prend le
             temps. Comme à la maison.
           </p>
           <div className={`squares ${styles.squares}`}>

@@ -8,7 +8,7 @@ export const site = {
   name: "RIVES Café",
   shortName: "RiVES",
   description:
-    "Coffee shop de quartier à la parisienne — zellige bordeaux, pâtisseries maison et le bon café qui ralentit le temps.",
+    "Coffee shop de quartier à Pantin (93), aux portes de Paris et Montreuil — café de spécialité, matcha et pâtisseries maison qui ralentissent le temps.",
   url: "https://rives-cafe.fr",
   tagline:
     "Coffee shop de quartier — bon café, pâtisseries maison & bonnes rencontres. Pantin (93).",
@@ -41,6 +41,42 @@ export const findUs = {
   mapsEmbed:
     "https://www.google.com/maps?q=80%20Avenue%20du%20G%C3%A9n%C3%A9ral%20Leclerc%2C%2093500%20Pantin&output=embed",
 } as const;
+
+/**
+ * SEO local. Coordonnées GPS approximatives (centre de Pantin) — à remplacer
+ * par les coordonnées exactes du commerce (Google Maps → clic droit → "Plus
+ * d'infos" donne lat/long) pour un référencement local optimal.
+ */
+export const geo = { latitude: 48.8966, longitude: 2.4045 } as const;
+
+/** Communes desservies (rayonnement local, utilisé dans les données structurées). */
+export const areaServed = [
+  "Pantin",
+  "Paris",
+  "Seine-Saint-Denis",
+  "Montreuil",
+  "Les Lilas",
+  "Le Pré-Saint-Gervais",
+  "Romainville",
+  "Bobigny",
+] as const;
+
+/** Mots-clés ciblés (SEO local). */
+export const keywords = [
+  "coffee shop Pantin",
+  "coffee shop 93",
+  "coffee shop Seine-Saint-Denis",
+  "coffee shop Paris",
+  "coffee shop Montreuil",
+  "matcha Pantin",
+  "matcha 93",
+  "matcha Montreuil",
+  "café de spécialité Pantin",
+  "brunch Pantin",
+  "pâtisseries maison Pantin",
+  "latte Pantin",
+  "RIVES Café",
+] as const;
 
 /** Adresse affichée dans la barre légale du footer. */
 export const legalAddress = "80 avenue du Général Leclerc, 93500 Pantin";
